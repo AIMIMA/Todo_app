@@ -67,11 +67,11 @@
   }
 
   .tasks .task .edit {
-    @apply text-sm font-bold mr-4 capitalize;
+    @apply text-xl font-bold mr-4 capitalize;
   }
 
   .tasks .task .delete {
-    @apply text-sm font-bold text-rose-500 capitalize;
+    @apply text-2xl font-bold text-rose-500 capitalize;
   }
 
   .tasks .task button:hover {

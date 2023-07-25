@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="stylesheet" href="./dist/all.min.css">
+  <link rel="stylesheet" href="./dist/output.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Todo app</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style> -->
+</head>
+
+<body class="">
+  
+    <div class="wrapper min-h-screen flex justify-center bg-light-bg dark:bg-dark-bg bg-[url(../images/bg-desktop-light.jpg)] dark:bg-[url(../images/bg-desktop-dark.jpg)] max-sm:bg-[url(../images/bg-mobile-light.jpg)] max-sm:dark:bg-[url(../images/bg-mobile-dark.jpg)] bg-no-repeat bg-top bg-contain py-12">
+      <div class="todo w-1/2 min-w-[350px] space-y-5">
+        <div class="header between">
+          <h1 class="tracking-[.25em] text-light-card text-3xl font-bold uppercase">todo</h1>
+          <img class="w-5 cursor-pointer" src="./images/icon-moon.svg" alt="dark-mode">
+        </div>
+        <div class="info">
+          <h2 class="-mt-2.5 text-light-card text-xl capitalize">What's up, <input type="text" class="user-name font-bold capitalize" placeholder="Name..."></h2>
+        </div>
+        <form class="flex items-center bg-light-card dark:bg-dark-card rounded-md p-3" id="container">
+          <span class="bubble"></span>
+          <input type="text" class="text-lg px-3" placeholder="Create a new todo...">
+          <i class="fa-solid fa-plus addTodo font-bold text-2xl cursor-pointer"></i>
+        </form>
+        <div class="tasks bg-light-card dark:bg-dark-card rounded-md overflow-hidden">
+          <div class="content"></div>
+          <div class="tools between text-light-t-500 dark:text-dark-t-900 p-3 text-sm">
+            <p class="counter"><span></span> items left</p>
+            <ul class="category max-sm:hidden  font-bold flex items-center gap-4">
+              <li class="all text-main cursor-pointer">All</li>
+              <li class="actives cursor-pointer hover:text-light-t-100   hover:dark:text-dark-text-h transition-all duration-300">Active</li>
+              <li class="completes cursor-pointer hover:text-light-t-100   hover:dark:text-dark-text-h transition-all duration-300">Completed</li>
+            </ul>
+            <button class="clear-completes hover:text-light-t-100 hover:dark:text-dark-text-n">Clear Completed</button>
+          </div>
+        </div>
+        <ul class="category sm:hidden bg-light-card dark:bg-dark-card text-light-t-500 dark:text-dark-t-900 rounded-md w-full center gap-4 p-3">
+          <li class="all text-main cursor-pointer">All</li>
+          <li class="actives cursor-pointer hover:text-light-t-100   hover:dark:text-dark-text-h transition-all duration-300">Active</li>
+          <li class="completes cursor-pointer hover:text-light-t-100   hover:dark:text-dark-text-h transition-all duration-300">Completed</li>
+        </ul>
+      </div>
+    </div>
+    
+
+  <!-- Todo
+
+  items left
+
+  All
+  Active 
+  Completed
+
+  Clear Completed
+
+  Drag and drop to reorder list -->
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="./main.js"></script>
+</body>
+
+</html>

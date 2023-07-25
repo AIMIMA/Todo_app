@@ -18,6 +18,9 @@
     @apply cursor-pointer transition-all duration-300;
   }
 
+  i {
+    @apply cursor-pointer transition-all duration-300;
+  }
 
   .bubble::after {
     background: url(../images/icon-check.svg), linear-gradient(135deg ,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
@@ -39,7 +42,7 @@
   }
 
   input[type="text"] {
-    @apply bg-transparent caret-gradientM flex-1;
+    @apply bg-transparent caret-rose-500 flex-1;
   }
 
   #container .addTodo,

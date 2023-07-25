@@ -444,14 +444,21 @@ button {
   transition-duration: 300ms;
 }
 
+i {
+  cursor: pointer;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}
+
 .bubble::after {
   background: url(../images/icon-check.svg), linear-gradient(135deg ,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
 }
 
 .bubble {
   position: relative;
-  height: 20px;
-  width: 20px;
+  height: 1.25rem;
+  width: 1.25rem;
   cursor: pointer;
   border-radius: 9999px;
   --tw-bg-opacity: 1;
@@ -525,7 +532,7 @@ button {
 input[type="text"] {
   flex: 1 1 0%;
   background-color: transparent;
-  caret-color: linear-gradient(135deg ,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  caret-color: #f43f5e;
 }
 
 .tasks .task input:not(:-moz-read-only) {
@@ -873,10 +880,6 @@ input[type="text"] {
   padding-bottom: 3rem;
 }
 
-.text-left {
-  text-align: left;
-}
-
 .text-center {
   text-align: center;
 }
@@ -935,12 +938,6 @@ input[type="text"] {
 .text-main {
   --tw-text-opacity: 1;
   color: hsl(220 98% 61% / var(--tw-text-opacity));
-}
-
-.shadow-md {
-  --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
-  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
 .shadow-xl {

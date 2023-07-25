@@ -99,14 +99,16 @@ function addElements(tasksArray) {
     taskInput.value = task.title;
     todo.appendChild(taskInput);
 
-    let editBtn = document.createElement("button")
+    let editBtn = document.createElement("i")
+    editBtn.classList.add("fa-solid")
+    editBtn.classList.add("fa-pen-to-square")
     editBtn.classList.add("edit")
-    editBtn.appendChild(document.createTextNode("edit"))
     todo.appendChild(editBtn)
 
-    let deleteBtn = document.createElement("button")
+    let deleteBtn = document.createElement("i")
+    deleteBtn.classList.add("fa-solid")
+    deleteBtn.classList.add("fa-xmark")
     deleteBtn.classList.add("delete")
-    deleteBtn.appendChild(document.createTextNode("delete"))
     todo.appendChild(deleteBtn)
 
     tasksContainer.appendChild(todo)
@@ -121,8 +123,7 @@ function addElements(tasksArray) {
     }
 
     editBtn.addEventListener("click", (ele) => {
-      if (ele.target.innerText.toLowerCase() === "edit") {
-        ele.target.innerText = "Save"
+      if (taskInput.hasAttribute("readonly")) {
         taskInput.removeAttribute("readonly") 
         taskInput.focus();
         taskInput.addEventListener("blur", () => {
@@ -130,11 +131,24 @@ function addElements(tasksArray) {
           addDataToLocal(tasksArray);
         })
       } else {
-        ele.target.innerText = "Edit"
         taskInput.setAttribute("readonly", "readonly")
       }
-      // editTask(ele.target)
     })
+
+    // editBtn.addEventListener("click", (ele) => {
+    //   if (ele.target.innerText.toLowerCase() === "edit") {
+    //     ele.target.innerText = "Save"
+    //     taskInput.removeAttribute("readonly") 
+    //     taskInput.focus();
+    //     taskInput.addEventListener("blur", () => {
+    //       task.title = taskInput.value;
+    //       addDataToLocal(tasksArray);
+    //     })
+    //   } else {
+    //     ele.target.innerText = "Edit"
+    //     taskInput.setAttribute("readonly", "readonly")
+    //   }
+    // })
 
     deleteBtn.addEventListener("click", (e) => {
       deleteTask(e.target.parentElement.getAttribute("data-id"))
